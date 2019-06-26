@@ -149,7 +149,7 @@ if (isset($_POST['submit'])) {
 			Gambar:
 			<br><br>
 			<img id="sourceImage" width="400" /><br>
-			<h3 id="description">...</h3>
+			
 		</div>
 		</div>
 </body>
