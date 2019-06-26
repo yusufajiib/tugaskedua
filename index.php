@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
 				<td><?php echo $blob->getName() ?></td>
 				<td><?php echo $blob->getUrl() ?></td>
 				<td>
-				<center><button type="button" onclick="alert('Hapus file blob')">Hapus</button></center>
+				<center><button type="button" onclick="alert('Maaf ! Hapus file Proses pengembangan')">Hapus</button></center>
 				</td>
 			</tr>
 				<?php
