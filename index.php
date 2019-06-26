@@ -65,7 +65,7 @@ if (isset($_POST['submit'])) {
 		<!-- Analisa Gambar dengan Azure Vision Ajax dan menangani CROSS ORIGIN-->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script src="/jquery.min.js"></script>
 		<br>
 		
 		<h1>AZURE ANALISA KOMPUTER VISION</h1>
