@@ -102,7 +102,7 @@ if (isset($_POST['submit'])) {
 		 
 			// Make the REST API call.
 			$.ajax({
-				url: uriBase + "?" + $.param(params),
+				url: uriBase + "https://southeastasia.api.cognitive.microsoft.com/" + $.param(params),
 		 
 			// Request headers.
 				beforeSend: function(xhrObj){
