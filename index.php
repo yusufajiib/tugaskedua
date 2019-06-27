@@ -28,38 +28,7 @@ if (isset($_POST['submit'])) {
 <html>
 <head>
 <title>Tugas kedua azure blockblob dan azure vision</title>
-<script type="text/javascript">
-function copyToClipboard() {
-  $("#generate-notif").select();
-  document.execCommand("copy");
-alert("berhasil di copy");
-}
-</script>
-<style type="text/css">
-    body {
-        font-family: sans-serif;
-        padding: 30px;
-    }
-    h4 {
-        font-size: 25px;
-    }
-    input[type="text"],
-    button[type="button"] {
-        padding: 10px 15px;
-        font-size: 16px;
-        border-radius: 5px;
-    }
-    input[type="text"] {
-        width: 300px;
-        border: 1px solid #bbb;
-    }
-    button[type="button"] {
-        background: #7aac42;
-        border: 1px solid #7aac42;
-        color: #fff;
-        cursor: pointer;
-    }
-</style>
+
 <head>
 <body>
 		<h1>AZURE PENYIMPANAN BLOCKBLOB</h1>
