@@ -35,43 +35,29 @@ function copyToClipboard() {
 alert("berhasil di copy");
 }
 </script>
-<style>
-    .tooltip {
-        position: relative;
-        display: inline-block;
+<style type="text/css">
+    body {
+        font-family: sans-serif;
+        padding: 30px;
     }
-
-    .tooltip .tooltiptext {
-        visibility: hidden;
-        width: 140px;
-        background-color: #555;
+    h4 {
+        font-size: 25px;
+    }
+    input[type="text"],
+    button[type="button"] {
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+    input[type="text"] {
+        width: 300px;
+        border: 1px solid #bbb;
+    }
+    button[type="button"] {
+        background: #7aac42;
+        border: 1px solid #7aac42;
         color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px;
-        position: absolute;
-        z-index: 1;
-        bottom: 150%;
-        left: 50%;
-        margin-left: -75px;
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-
-    .tooltip .tooltiptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-    }
-
-    .tooltip:hover .tooltiptext {
-        visibility: visible;
-        opacity: 1;
+        cursor: pointer;
     }
 </style>
 <head>
@@ -98,12 +84,8 @@ alert("berhasil di copy");
 			<tr>
 				<td><?php echo $blob->getName() ?></td>
 				<td>
-				<input type="text" style="width:500px;" id="myInput" value="<?php echo $blob->getUrl() ?>">
-				<div class="tooltip">
-				<button onclick="myFunction()" onmouseout="outFunc()">
-  				<span class="tooltiptext" id="myTooltip">Halaman web dari azure blockblob </span>Salin
-  				</button>
-				</div>
+				<input type="text" style="width:500px; value="<?php echo $blob->getUrl() ?>" id="pilih" readonly />
+        			<button type="button" onclick="copy_text()">Copy</button>
 				</td>
 				<td>
 				<center><button type="button" onclick="alert('Maaf ! Hapus file Proses pengembangan')">Hapus</button></center>
@@ -127,19 +109,12 @@ alert("berhasil di copy");
 		<h3>2. Kemudian copikan salah satu halaman web gambar diatas di bawah sini !</h3>
 		<script type="text/javascript">
 		
-    		function myFunction() {
-      			var copyText = document.getElementById("myInput");
-      			copyText.select();
-      			document.execCommand("copy");
-     
-      			var tooltip = document.getElementById("myTooltip");
-      			tooltip.innerHTML = "Tersalin !" + copyText.value;
-    			}
-
-    			function outFunc() {
-      			var tooltip = document.getElementById("myTooltip");
-      			tooltip.innerHTML = "Salin isi teks";
-    			}
+    		
+    		function copy_text() {
+        	document.getElementById("pilih").select();
+        	document.execCommand("copy");
+        	alert("Text berhasil dicopy");
+    		}
 
 		function processImage() {
 			// **********************************************
