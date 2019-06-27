@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
 <html>
 <head>
 <title>Tugas kedua azure blockblob dan azure vision</title>
-<head>
+<style>
 .tooltip {
     position: relative;
     display: inline-block;
@@ -66,6 +66,8 @@ if (isset($_POST['submit'])) {
     visibility: visible;
     opacity: 1;
 }
+</style>
+<head>
 <body>
 		<h1>AZURE PENYIMPANAN BLOCKBLOB</h1>
 		<h3>1. Silahkan Upload File terlebih dahulu untuk menambah gambar ke Azure Blockblob</h3>
