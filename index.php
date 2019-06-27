@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
 				<input type="text" value="<?php echo $blob->getUrl() ?>">
 				<div class="tooltip">
 				<button onclick="myFunction()" onmouseout="outFunc()">
-  				<span class="tooltiptext" id="myTooltip">Salin isi teks</span>
+  				<span class="tooltiptext" id="myTooltip">Salin url</span>
   				Salin
   				</button>
 				</div>
@@ -81,6 +81,21 @@ if (isset($_POST['submit'])) {
 		<h1>AZURE ANALISA KOMPUTER VISION</h1>
 		<h3>2. Kemudian copikan salah satu halaman web gambar diatas di bawah sini !</h3>
 		<script type="text/javascript">
+		
+    		function myFunction() {
+      			var copyText = document.getElementById("myInput");
+      			copyText.select();
+      			document.execCommand("copy");
+     
+      			var tooltip = document.getElementById("myTooltip");
+      			tooltip.innerHTML = "Tersalin " + copyText.value;
+    			}
+
+    			function outFunc() {
+      			var tooltip = document.getElementById("myTooltip");
+      			tooltip.innerHTML = "Salin isi teks";
+    			}
+
 		function processImage() {
 			// **********************************************
 			// *** Update or verify the following values. ***
