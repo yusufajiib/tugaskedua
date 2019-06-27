@@ -14,6 +14,7 @@ $containerName = "penyimpanancomputervision";
 if (isset($_POST['submit'])) {
 	$fileToUpload = $_FILES["fileToUpload"]["name"];
 	$content = fopen($_FILES["fileToUpload"]["tmp_name"], "r");
+	echo "Uploading BlockBlob: ".PHP_EOL;
 		
 	$blobClient->createBlockBlob($containerName, $fileToUpload, $content);
 }	
