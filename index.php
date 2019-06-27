@@ -28,6 +28,7 @@ if (isset($_POST['submit'])) {
 <html>
 <head>
 <title>Tugas kedua azure blockblob dan azure vision</title>
+<head>
 .tooltip {
     position: relative;
     display: inline-block;
@@ -65,8 +66,6 @@ if (isset($_POST['submit'])) {
     visibility: visible;
     opacity: 1;
 }
-
-<head>
 <body>
 		<h1>AZURE PENYIMPANAN BLOCKBLOB</h1>
 		<h3>1. Silahkan Upload File terlebih dahulu untuk menambah gambar ke Azure Blockblob</h3>
@@ -91,11 +90,10 @@ if (isset($_POST['submit'])) {
 			<tr>
 				<td><?php echo $blob->getName() ?></td>
 				<td>
-				<input type="text" style="width:360px;" value="<?php echo $blob->getUrl() ?>">
+				<input type="text" style="width:400px;" value="<?php echo $blob->getUrl() ?>">
 				<div class="tooltip">
 				<button onclick="myFunction()" onmouseout="outFunc()">
   				<span class="tooltiptext" id="myTooltip">Salin url</span>
-  				Salin
   				</button>
 				</div>
 				</td>
