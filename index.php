@@ -80,7 +80,6 @@ if (isset($_POST['submit'])) {
 			<tr>
 				<th>***Nama File***</th>
 				<th>***Halaman web dari azure blockblob***</th>
-				<th>***Copy Url***</th>
 				<th>***Hapus***</th>
 			</tr>
 			<tbody>
@@ -95,7 +94,7 @@ if (isset($_POST['submit'])) {
 				<input type="text" style="width:400px;" value="<?php echo $blob->getUrl() ?>">
 				<div class="tooltip">
 				<button onclick="myFunction()" onmouseout="outFunc()">
-  				<span class="tooltiptext" id="myTooltip">Salin url</span>
+  				<span class="tooltiptext" id="myTooltip">Salin url</span>Salin
   				</button>
 				</div>
 				</td>
