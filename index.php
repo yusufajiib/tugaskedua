@@ -94,7 +94,7 @@ if (isset($_POST['submit'])) {
 				<input type="text" style="width:500px;" id="myInput" value="<?php echo $blob->getUrl() ?>">
 				<div class="tooltip">
 				<button onclick="myFunction()" onmouseout="outFunc()">
-  				<span class="tooltiptext" id="myTooltip">Tersalin ! Halaman web dari azure blockblob </span>Salin
+  				<span class="tooltiptext" id="myTooltip">Halaman web dari azure blockblob </span>Salin
   				</button>
 				</div>
 				</td>
@@ -125,7 +125,7 @@ if (isset($_POST['submit'])) {
       			document.execCommand("copy");
      
       			var tooltip = document.getElementById("myTooltip");
-      			tooltip.innerHTML = "Tersalin " + copyText.value;
+      			tooltip.innerHTML = "Tersalin !" + copyText.value;
     			}
 
     			function outFunc() {
