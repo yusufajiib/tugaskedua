@@ -55,6 +55,9 @@ if (isset($_POST['submit'])) {
 				<td>
 				<input type="text" value="<?php echo $blob->getUrl() ?>" id="pilih" />
         			<button type="button" onclick="copy_text()">Copy</button>
+				<div>
+				<button onclick="copy_text()"></button>
+				</div>
 				</td>
 				<td>
 				<center><button type="button" onclick="alert('Maaf ! Hapus file Proses pengembangan')">Hapus</button></center>
