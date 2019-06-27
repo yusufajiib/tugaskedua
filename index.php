@@ -119,7 +119,7 @@ if (isset($_POST['submit'])) {
 		<h3>2. Kemudian copikan salah satu halaman web gambar diatas di bawah sini !</h3>
 		<script type="text/javascript">
 		
-    		function myFunction(myInput) {
+    		function myFunction(copyText, tooltip) {
       			var copyText = document.getElementById("myInput");
       			copyText.select();
       			document.execCommand("copy");
