@@ -27,7 +27,45 @@ if (isset($_POST['submit'])) {
 <!DOCTYPE html>
 <html>
 <head>
-<title>Tugas kedua azure blockblob dan azure vision</title> 
+<title>Tugas kedua azure blockblob dan azure vision</title>
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
 <head>
 <body>
 		<h1>AZURE PENYIMPANAN BLOCKBLOB</h1>
@@ -53,7 +91,7 @@ if (isset($_POST['submit'])) {
 			<tr>
 				<td><?php echo $blob->getName() ?></td>
 				<td>
-				<input type="text" value="<?php echo $blob->getUrl() ?>">
+				<input type="text" style="width:360px;" value="<?php echo $blob->getUrl() ?>">
 				<div class="tooltip">
 				<button onclick="myFunction()" onmouseout="outFunc()">
   				<span class="tooltiptext" id="myTooltip">Salin url</span>
