@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
 			<tr>
 				<td><?php echo $blob->getName() ?></td>
 				<td>
-				<input type="text" value="<?php echo $blob->getUrl() ?>" id="pilih" />
+				<input type="text" style="width:500px;" value="<?php echo $blob->getUrl() ?>" id="pilih" />
         			<button type="button" onclick="copy_text()">Copy</button>
 				<div>
 				<button onclick="copy_text()"></button>
