@@ -52,9 +52,7 @@ if (isset($_POST['submit'])) {
 				?>						
 			<tr>
 				<td>
-				<div>
 				<input type="text" style="width:100px;" value="<?php echo $blob->getName() ?>" id="pilih" />
-				</div>
 				</td>
 				<td>
 				<input type="text" style="width:500px;" value="<?php echo $blob->getUrl() ?>" id="pilih" />
@@ -63,9 +61,7 @@ if (isset($_POST['submit'])) {
 				</div>
 				</td>
 				<td>
-				<div>
 				<center><button type="button" onclick="alert('Maaf ! Hapus file Proses pengembangan')">Hapus</button></center>
-				</div>
 				</td>
 			</tr>
 				<?php
