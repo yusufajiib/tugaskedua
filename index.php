@@ -28,6 +28,13 @@ if (isset($_POST['submit'])) {
 <html>
 <head>
 <title>Tugas kedua azure blockblob dan azure vision</title>
+<script type="text/javascript">
+function copyToClipboard() {
+  $("#generate-notif").select();
+  document.execCommand("copy");
+alert("berhasil di copy");
+}
+</script>
 <style>
     .tooltip {
         position: relative;
@@ -113,6 +120,7 @@ if (isset($_POST['submit'])) {
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 		<script src="/jquery.min.js"></script>
+		<script src="/jquery-2.1.1.js"></script>
 		<br>
 		
 		<h1>AZURE ANALISA KOMPUTER VISION</h1>
