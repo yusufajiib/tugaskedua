@@ -80,7 +80,6 @@ if (isset($_POST['submit'])) {
 			<tr>
 				<th>***Nama File***</th>
 				<th>***Halaman web dari azure blockblob***</th>
-				<th>***Hapus***</th>
 			</tr>
 			<tbody>
 				<?php
@@ -97,9 +96,6 @@ if (isset($_POST['submit'])) {
   				<span class="tooltiptext" id="myTooltip">Halaman web dari azure blockblob </span>Salin
   				</button>
 				</div>
-				</td>
-				<td>
-				<center><button type="button" onclick="alert('Maaf ! Hapus file Proses pengembangan')">Hapus</button></center>
 				</td>
 			</tr>
 				<?php
