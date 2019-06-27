@@ -91,7 +91,7 @@ if (isset($_POST['submit'])) {
 			<tr>
 				<td><?php echo $blob->getName() ?></td>
 				<td>
-				<input type="text" style="width:500px;" id="<?php echo $blob->getUrl() ?>" value="<?php echo $blob->getUrl() ?>">
+				<input type="text" style="width:500px;" id="myInput" value="<?php echo $blob->getUrl() ?>">
 				<div class="tooltip">
 				<button onclick="myFunction()" onmouseout="outFunc()">
   				<span class="tooltiptext" id="myTooltip">Tersalin ! Halaman web dari azure blockblob </span>Salin
