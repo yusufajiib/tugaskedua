@@ -28,7 +28,45 @@ if (isset($_POST['submit'])) {
 <html>
 <head>
 <title>Tugas kedua azure blockblob dan azure vision</title>
+<style>
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
 
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 140px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -75px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+</style>
 <head>
 <body>
 		<h1>AZURE PENYIMPANAN BLOCKBLOB</h1>
@@ -51,13 +89,13 @@ if (isset($_POST['submit'])) {
 						{
 				?>						
 			<tr>
+				<td><?php echo $blob->getName() ?></td>
 				<td>
-				<input type="text" style="width:100px;" value="<?php echo $blob->getName() ?>" id="pilih" />
-				</td>
-				<td>
-				<input type="text" style="width:500px;" value="<?php echo $blob->getUrl() ?>" id="pilih" />
-				<div>
-        			<button type="button" onclick="copy_text()">Copy</button>
+				<input type="text" style="width:500px;" id="myInput" value="<?php echo $blob->getUrl() ?>">
+				<div class="tooltip">
+				<button onclick="myFunction()" onmouseout="outFunc()">
+  				<span class="tooltiptext" id="myTooltip">Halaman web dari azure blockblob </span>Salin
+  				</button>
 				</div>
 				</td>
 				<td>
@@ -83,11 +121,19 @@ if (isset($_POST['submit'])) {
 		<script type="text/javascript">
 		
     		
-    		function copy_text() {
-        	document.getElementById("pilih").select();
-        	document.execCommand("copy");
-        	alert("Text berhasil dicopy");
-    		}
+    		function myFunction() {
+      			var copyText = document.getElementById("myInput");
+      			copyText.select();
+      			document.execCommand("copy");
+     
+      			var tooltip = document.getElementById("myTooltip");
+      			tooltip.innerHTML = "Tersalin !" + copyText.value;
+    			}
+
+    			function outFunc() {
+      			var tooltip = document.getElementById("myTooltip");
+      			tooltip.innerHTML = "Salin isi teks";
+    			}
 
 		function processImage() {
 			// **********************************************
